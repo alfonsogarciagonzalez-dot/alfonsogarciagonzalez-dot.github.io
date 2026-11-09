@@ -9,11 +9,13 @@ function preload() {
 //  img = loadImage('cat.jpg');  // cat.jpg needs to be next to this .js file
 // you can link to an image on your github account
   img = loadImage('https://dma-git.github.io/images/74.png');
+  img2 = loadImage ('https://alfonsogarciagonzalez-dot.github.io/bootstrap/flag.png');
 }
 
 function setup() {
 createCanvas(600, 600);  // canvas size
 background(screenbg);   // use our background screen color
+background(screenbg); image(img2, 0,0, 600, 600);
 
 }
 
@@ -33,53 +35,55 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
   // graphic function
 
  if (toolChoice == '1' ) {  // first tool
-    stroke(173, 252, 3, 80);
-    strokeWeight(5);
+    stroke(255, 25, 3,);
+    strokeWeight(50);5
     line(mouseX, mouseY, pmouseX, pmouseY);
     
   } else if (toolChoice == '2') { // second tool
-
-    strokeWeight(20);
+    stroke(255, 119, 0)
+    strokeWeight(50);4
     line(mouseX, mouseY, pmouseX, pmouseY);2
     strokeWeight(1);
   } else if (toolChoice == '3') { // third tool
 
-    stroke(252, 3, 3, 80);
+    stroke(255, 247, 0);
     line(mouseX, mouseY, pmouseX, pmouseY);
-    stroke('black')
+    strokeWeight(50)
   } else if (toolChoice == '4') {
-    stroke (92, 60, 28, 80);
-    stroke(0, 0, 255);
+    stroke (47, 255, 0);
+    strokeWeight (50)
     line(mouseX, mouseY, pmouseX, pmouseY);
   } else if (key == '5') { // this tool calls a function
-    stroke(0, 0, 255);
-    testbox(20, 20, 200);
-    testbox(200, 20, 20);
-    
+    stroke(0, 76, 255);
+   strokeWeight (50)
+   line(mouseX, mouseY, pmouseX, pmouseY);
+
  // make testbox do something!
  //   line(mouseX, mouseY, pmouseX, pmouseY);
   } else if (toolChoice == '6') {
-
-    stroke(200);
+stroke (79, 0, 196)
+    strokeWeight(40);
     line(mouseX, mouseY, pmouseX, pmouseY);
   } else if (toolChoice == '7') {
-
-    fill(100, 200, 100);
-    rect(mouseX, mouseY, 20, 20);
+stroke (74, 54, 16)
+strokeWeight(50)
+   line(mouseX, mouseY, pmouseX, pmouseY);
   } else if (toolChoice == '8') {
-
-    fill(300, 100, 0, 80);
-    rect(mouseX, mouseY, 20, 20);
+stroke (255, 255, 255)
+strokeWeight(50)
+   line(mouseX, mouseY, pmouseX, pmouseY);
   } else if (toolChoice == '9') {
-
-    fill(300, 100, 0, 80);
-    rect(mouseX, mouseY, 40, 40);
+stroke (18, 18, 18)
+strokeWeight(50)
+   line(mouseX, mouseY, pmouseX, pmouseY);
   } else if (toolChoice == '0') {
     stroke(0, 0);
     fill(random(255), random(255), random(255), random(255));
     rect(mouseX, mouseY, 200, 150);
   } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
     image(img, mouseX, mouseY, 50, 50);
+  } else if (toolChoice == 'f' || toolChoice == 'F') { // g places the image we pre-loaded
+    image(img2, mouseX, mouseY, 50, 50);
     
   }
  }
